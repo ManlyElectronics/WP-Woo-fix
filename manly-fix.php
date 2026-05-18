@@ -398,6 +398,6 @@ add_action(
 			}
 		);
 		// Explicitly close the buffer before WordPress's own shutdown handler (priority 1).
-		add_action( 'shutdown', 'ob_end_flush', 0 );
+		add_action( 'shutdown', function() { ob_end_flush(); }, 0 );
 	}
 );
