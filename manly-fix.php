@@ -10,17 +10,17 @@
  * @license  GPL-3.0 https://www.gnu.org/licenses/gpl-3.0.html
  * @link     https://manlyelectronics.com.au
  *
- * PHP Version 7.2
+ * PHP Version 7.4
  *
  * @wordpress-plugin
  * Plugin Name: Manly Fix
  * Description: Applies configurable HTML fixes to WordPress and WooCommerce page output. Each fix can be individually enabled or disabled.
- * Version:     1.5
+ * Version:     1.5.1
  * Author:      Manly Electronics
  * Author URI:  https://manlyelectronics.com.au
  * License:     GPL-3.0
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Requires PHP: 7.2
+ * Requires PHP: 7.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

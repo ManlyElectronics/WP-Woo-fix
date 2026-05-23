@@ -2,9 +2,9 @@
 Contributors: dimitriaus
 Tags: html5, validation, woocommerce, trailing-slash, markup
 Requires at least: 4.0
-Tested up to: 6.9
-Requires PHP: 7.2
-Stable tag: 1.5
+Tested up to: 7.0
+Requires PHP: 7.4
+Stable tag: 1.5.1
 License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -16,29 +16,29 @@ Applies configurable HTML fixes to WordPress and WooCommerce page output. Each f
 
 === WordPress & HTML Fixes ===
 
-* **Remove trailing slashes** — Removes XHTML-style trailing slashes (`/>`) from void elements (`<meta>`, `<link>`, `<img>`, `<input>`, etc.) for clean HTML5 output.
+* **Remove trailing slashes** - Removes XHTML-style trailing slashes (`/>`) from void elements (`<meta>`, `<link>`, `<img>`, `<input>`, etc.) for clean HTML5 output.
   *Validator: "Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values."*
 
-* **Remove intrinsic size CSS** — Removes the `contain-intrinsic-size` CSS rule injected by WordPress for auto-sized images.
+* **Remove intrinsic size CSS** - Removes the `contain-intrinsic-size` CSS rule injected by WordPress for auto-sized images.
   *Validator: "CSS: contain-intrinsic-size: Property contain-intrinsic-size doesn't exist."*
 
-* **Remove redundant aria-hidden** — Removes `aria-hidden="true"` from elements that already carry the `hidden` attribute.
+* **Remove redundant aria-hidden** - Removes `aria-hidden="true"` from elements that already carry the `hidden` attribute.
   *Validator: "Attribute aria-hidden is unnecessary for elements that have attribute hidden."*
 
-* **Move router style to `<head>`** — Moves the WordPress Interactivity Router animations inline `<style>` tag from `<body>` to `<head>`.
+* **Move router style to `<head>`** - Moves the WordPress Interactivity Router animations inline `<style>` tag from `<body>` to `<head>`.
   *Validator: "Element style not allowed as child of element body in this context. (Suppressing further errors from this subtree.)"*
 
-* **Remove invalid `as` from prefetch links** — Removes the invalid `as` attribute from `<link rel="prefetch">` elements emitted by WooCommerce.
+* **Remove invalid `as` from prefetch links** - Removes the invalid `as` attribute from `<link rel="prefetch">` elements emitted by WooCommerce.
   *Validator: "A `link` element with an `as` attribute must have a `rel` attribute that contains the value `preload` or the value `modulepreload`."*
 
 === WooCommerce Fixes ===
 
 These fixes are only shown when WooCommerce is active.
 
-* **Mini-cart role="dialog"** — Adds missing `role="dialog"` to the WooCommerce mini-cart drawer div.
+* **Mini-cart role="dialog"** - Adds missing `role="dialog"` to the WooCommerce mini-cart drawer div.
   *Validator: "Element div is missing one or more of the following attributes: role."*
 
-* **Add placeholder src to Interactivity API images** — Adds a transparent placeholder `src` and an empty `alt=""` to `<img>` elements that use the WordPress Interactivity API but have no static attributes. Real values are set by JavaScript at runtime.
+* **Add placeholder src to Interactivity API images** - Adds a transparent placeholder `src` and an empty `alt=""` to `<img>` elements that use the WordPress Interactivity API but have no static attributes. Real values are set by JavaScript at runtime.
   *Validator: "Element `img` is missing one or more of the following attributes: `src`, `srcset`." / "An `img` element must have an `alt` attribute."*
 
 == Installation ==
@@ -62,6 +62,9 @@ No. The WooCommerce fixes section only appears in settings and only runs when Wo
 Yes, the plugin uses standard WordPress hooks and PHP functions compatible with WordPress 4.0+.
 
 == Changelog ==
+
+= 1.5.1 =
+* Updated: Requires PHP bumped to 7.4 (WordPress 7.0 minimum); Tested up to 7.0.
 
 = 1.5 =
 * Merged all Manly Woo Fix functionality into this plugin
